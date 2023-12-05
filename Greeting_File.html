@@ -1,0 +1,42 @@
+<!Doctype HTMl>
+<html>
+<head>
+ <title> JS-HTML Integration </title>
+ </head>
+ <body>
+ <script>
+ function June(){
+ document.getElementById("demo").innerHTML = new Date("2023-06-15");
+ }
+ </script>
+ <h1> Let's Integrate HTML page with JS </h1>
+<p>This is my first page HTML page with Javascript</p>
+<button type='button' onclick='June()'> Click me to get another date</button>
+<p id = 'demo'> Date is....</p>
+<script>
+ function Today(){
+ document.getElementById("demo2").innerHTML =  Date();
+ }
+ </script>
+ 
+<button type='button' onclick='Today()'> Click me to get todays date</button>
+
+<p id = 'demo2'> Date is....</p>
+
+<script>
+
+function diffDate(){
+var nDate = new Date();
+var oDate = new Date('2023-06-15');
+var difference = nDate.getTime() - oDate.getTime();
+console.log(difference);
+var diff_Days = difference/(1000*60*60*24);
+document.getElementById("demo1").innerHTML = 'The number of days between today and your date is' + diff_Days.toFixed(1));
+}
+</script>
+<button type='button' onclick='diffDate()'> Click me </button>
+
+<p id = 'demo1'> Date is....</p>
+
+</body>
+</html>
